@@ -1,5 +1,5 @@
 # Mundial Frontend
 
 ## Developers
-Samuel Levy
+Samuel Levy  
 Cayque Freitas
