@@ -2,3 +2,4 @@
 
 ## Developers
 Samuel Levy
+Cayque Freitas
