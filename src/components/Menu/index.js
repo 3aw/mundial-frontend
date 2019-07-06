@@ -12,7 +12,7 @@ export default class Menu extends Component {
       { title: "Produtos Especiais" },
       { title: "Dicas e Receitas" },
       { title: "SAC" },
-      { title: "Nóticias" },
+      { title: "Notícias" },
       { title: "Newsletter" },
       { title: "Sala de Imprensa" },
       { title: "Eventos" }
