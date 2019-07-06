@@ -1,6 +1,6 @@
 import colors from "./colors";
-// import metrics from './metrics';
+import metrics from "./metrics";
 // import fonts from './fonts';
 //import common from './common';
 
-export { colors };
+export { colors, metrics };
