@@ -3,7 +3,7 @@ import { colors, metrics } from "../../globals";
 
 export const Container = styled.nav`
   background-color: ${colors.secondary};
-  padding: 20px 0;
+  // padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,5 +11,10 @@ export const Container = styled.nav`
 
 export const Item = styled.li`
   color: ${colors.white};
-  font-size: ${metrics.fonts};
+  font-size: ${metrics.fonts.small};
+  padding: 15px 22px;
+  border-left: 1px solid ${colors.darkblue};
+  &:first-child {
+    border-left: none;
+  }
 `;
