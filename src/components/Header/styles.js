@@ -5,6 +5,10 @@ import { colors } from "../../globals";
 
 export const Container = styled.header`
   width: 100%;
+`;
+
+export const TopBar = styled.header`
+  width: 100%;
   background-color: ${colors.primary};
   padding: 20px 0;
   display: flex;
