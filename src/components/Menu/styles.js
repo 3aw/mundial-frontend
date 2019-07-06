@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import colors from "../../globals/colors";
+import { colors, metrics } from "../../globals";
 
 export const Container = styled.nav`
   background-color: ${colors.secondary};
@@ -11,5 +11,5 @@ export const Container = styled.nav`
 
 export const Item = styled.li`
   color: ${colors.white};
-  font-size: 14px;
+  font-size: ${metrics.fonts};
 `;
