@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import arrow from "../../assets/images/arrow.svg";
 
-import { colors } from "../../globals";
+import { metrics, colors } from "../../globals";
 
 export const Container = styled.div`
   width: 100%;
@@ -35,11 +35,20 @@ export const Items = styled.div`
 export const Item = styled.div`
   background-color: #fff;
   border-radius: 10px;
-
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   height: 460px;
+  width: 100%;
+  max-width: 260px;
 `;
 
 export const Image = styled.img`
   padding: 10px;
+`;
+
+export const Title = styled.p`
+  width: 100%;
+  text-align: center;
+  padding: 0px 20px;
+  font-size: ${metrics.fonts.small};
+  color: ${colors.darkgray};
 `;

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import { Container, Wrapper, Items, Item, Image } from "./styles";
+import { Container, Wrapper, Items, Item, Image, Title } from "./styles";
 import { HeaderTitle } from "../Titles/styles";
+import { colors } from "../../globals";
 
 export default class Offers extends Component {
   render() {
@@ -12,7 +13,7 @@ export default class Offers extends Component {
     return (
       <Container>
         <Wrapper>
-          <HeaderTitle>Confira as ofertas</HeaderTitle>
+          <HeaderTitle color={colors.white}>Confira as ofertas</HeaderTitle>
         </Wrapper>
 
         <Items>
@@ -22,6 +23,7 @@ export default class Offers extends Component {
                 src="https://supermercadosmundial.com.br/content/240x240/E05oIAUM4FD4H5OT.png"
                 alt=""
               />
+              <Title>Camarão Cinza 100/120 Pacote 1 kg</Title>
             </Item>
             <Item>
               <Image

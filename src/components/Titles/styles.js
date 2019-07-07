@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { colors } from "../../globals";
 
 export const HeaderTitle = styled.h1`
   font-size: 50px;
   font-weight: 100;
-  color: #fff;
+  color: ${props => props.color};
   margin: 0 0 28px;
   border-top: 1px solid #fb8b45;
   padding: 12px 0 0 0;
@@ -17,7 +16,7 @@ export const HeaderTitle = styled.h1`
     position: absolute;
     top: 0;
     left: 0;
-    background: ${colors.white};
+    background: ${props => props.color};
   }
   ::after {
     content: " ";
@@ -26,6 +25,6 @@ export const HeaderTitle = styled.h1`
     position: absolute;
     top: 3px;
     left: 0;
-    background: ${colors.white};
+    background: ${props => props.color};
   }
 `;
