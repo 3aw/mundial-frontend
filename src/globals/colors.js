@@ -3,5 +3,6 @@ export default {
   secondary: "#2980bb",
   darkblue: "#2574a9",
   white: "#FFFFFF",
-  gray: "#c5c5c5"
+  gray: "#c5c5c5",
+  real_primary: "#db812e"
 };

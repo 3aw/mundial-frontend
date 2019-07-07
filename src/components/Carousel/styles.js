@@ -6,6 +6,7 @@ import { colors } from "../../globals";
 export const Container = styled.div`
   width: 100%;
   color: #333;
+  margin-bottom: -5px;
 
   /* Slider */
   .slick-slider {
