@@ -8,10 +8,16 @@ import {
   Social,
   List,
   ListItem,
-  PaymentList,
+  PaymentBlock,
   PaymentText,
   PaymentCardList,
-  PaymentCardListItem
+  PaymentCardListItem,
+  TextBlock,
+  TextBox,
+  Text,
+  Developer,
+  LegalText,
+  LegalTextContainer
 } from "./styles";
 import {
   alelo,
@@ -28,6 +34,7 @@ import {
   visavale,
   vralimentacao
 } from "./cards";
+import developerIcon from "../../assets/images/3aw.png";
 
 export default class Header extends Component {
   state = {
@@ -144,7 +151,7 @@ export default class Header extends Component {
                 <Social />
               </ListBlock>
             </NavList>
-            <PaymentList>
+            <PaymentBlock>
               <ListBlock>
                 <PaymentText marginb={30}>Formas de Pagamento</PaymentText>
                 <PaymentText marginb={10}>
@@ -170,7 +177,31 @@ export default class Header extends Component {
                   </PaymentCardList>
                 </PaymentText>
               </ListBlock>
-            </PaymentList>
+            </PaymentBlock>
+            <TextBlock>
+              <TextBox width={60}>
+                <Text fontSize={"13px"}>
+                  Supermercados Mundial LTDA © 2019 - Todos os Direitos
+                  Reservados
+                </Text>
+                <Text fontSize={"13px"}>
+                  Todas as marcas e nomes de produtos mencionados são marcas
+                  registradas de seus respectivos proprietários.
+                </Text>
+                <Text fontSize={"13px"}>
+                  Todas as ofertas mencionadas no site são as mesmas do encarte,
+                  exceto as ofertas da TV.
+                </Text>
+              </TextBox>
+              <TextBox width={23}>
+                <Text fontSize={"13px"}>
+                  Desenvolvido por:
+                  <Developer href={"http://www.3aw.com.br/"} target="_blank">
+                    <img src={developerIcon} />
+                  </Developer>
+                </Text>
+              </TextBox>
+            </TextBlock>
           </Footer>
         </Wrapper>
       </Container>

@@ -7,23 +7,21 @@ import iconIg from "../../assets/images/ig.png";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100vh;
   background: ${colors.darkblue};
   display: flex;
   justify-content: center;
+  position: relative;
 `;
 
 export const Wrapper = styled.div`
   width: 100%;
   max-width: 1170px;
   display: flex;
-  border: solid 1px red;
 `;
 
 //// FOOTER START ///
 
 export const Footer = styled.footer`
-  border: solid 1px white;
   width: 100%;
 `;
 //                //
@@ -115,7 +113,7 @@ export const Social = () => (
 
 // Payment methods //
 
-export const PaymentList = styled.div`
+export const PaymentBlock = styled.div`
   border-bottom: solid 1px ${colors.secondary};
   height: auto;
   display: flex;
@@ -141,4 +139,27 @@ export const PaymentCardListItem = styled(ListItem)`
 export const Card = styled.img`
   width: 44px;
   height: 29px;
+`;
+
+//
+
+export const TextBlock = styled(PaymentBlock)`
+  padding: 26px 0 65px 15px;
+  background: ${props => props.bgcolor};
+`;
+export const TextBox = styled.div`
+  width: ${props => props.width + "%"};
+`;
+export const Text = styled.p`
+  font-size: ${props => props.fontSize};
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+`;
+
+export const Developer = styled.a`
+  display: block;
+  margin-left: 15px;
 `;
