@@ -28,13 +28,13 @@ export const Footer = styled.footer`
 `;
 //                //
 // navMenuBlocks //
-export const FooterNavList = styled.nav`
+export const NavList = styled.nav`
   border-bottom: solid 1px ${colors.secondary};
   height: auto;
   display: flex;
   padding: 42px 0 65px 15px;
 `;
-export const NavBlock = styled.div`
+export const ListBlock = styled.div`
   width: ${props => props.width + "%"};
   height: auto;
 `;
@@ -110,4 +110,33 @@ export const Social = () => (
       </a>
     </SocialItems>
   </BlockSocial>
+);
+
+// Payment methods //
+
+export const PaymentList = styled.div`
+  border: solid 1px red;
+  /* border-bottom: solid 1px ${colors.secondary}; */
+  height: auto;
+  display: flex;
+  padding: 50px 0 58px 15px;
+`;
+
+export const PaymentText = styled(SocialTitle)`
+  margin-bottom: ${props => props.marginb + "px"};
+`;
+export const PaymentCardList = styled(List)`
+  flex-direction: row;
+`;
+export const PaymentCardListItem = styled(ListItem)``;
+
+export const Card = styled.img`
+  width: 44px;
+  height: 29px;
+`;
+
+export const CardIcon = props => (
+  <PaymentCardListItem>
+    <Card src={props} />
+  </PaymentCardListItem>
 );

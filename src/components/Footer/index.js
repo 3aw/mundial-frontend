@@ -3,12 +3,31 @@ import {
   Container,
   Wrapper,
   Footer,
-  FooterNavList,
-  NavBlock,
+  NavList,
+  ListBlock,
   Social,
   List,
-  ListItem
+  ListItem,
+  PaymentList,
+  PaymentText,
+  PaymentCardList,
+  PaymentCardListItem
 } from "./styles";
+import {
+  alelo,
+  chequeeletronico,
+  elo,
+  goodcard,
+  mastercard,
+  policard,
+  redeshop,
+  sodexo,
+  ticketalimentacao,
+  upplan,
+  visa,
+  visavale,
+  vralimentacao
+} from "./cards";
 
 export default class Header extends Component {
   state = {
@@ -82,15 +101,22 @@ export default class Header extends Component {
       }
     ]
   };
+  renderImageListOne = () => {
+    return (
+      <li>
+        <img src={sodexo} />
+      </li>
+    );
+  };
 
   render() {
     return (
       <Container>
         <Wrapper>
           <Footer>
-            <FooterNavList>
+            <NavList>
               {this.state.blocks.map(navItem => (
-                <NavBlock width={23}>
+                <ListBlock width={23}>
                   <List>
                     {navItem.items.map(item => (
                       <a
@@ -102,12 +128,21 @@ export default class Header extends Component {
                       </a>
                     ))}
                   </List>
-                </NavBlock>
+                </ListBlock>
               ))}
-              <NavBlock width={31}>
+              <ListBlock width={31}>
                 <Social />
-              </NavBlock>
-            </FooterNavList>
+              </ListBlock>
+            </NavList>
+            <PaymentList>
+              <ListBlock width={100}>
+                <PaymentText marginb={30}>Formas de Pagamento</PaymentText>
+                <PaymentText marginb={10}>
+                  Cartoes de Alimentação
+                  <PaymentCardList>{this.renderImageListOne()}</PaymentCardList>
+                </PaymentText>
+              </ListBlock>
+            </PaymentList>
           </Footer>
         </Wrapper>
       </Container>
