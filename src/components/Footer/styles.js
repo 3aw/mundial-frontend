@@ -37,6 +37,7 @@ export const NavList = styled.nav`
 export const ListBlock = styled.div`
   width: ${props => props.width + "%"};
   height: auto;
+  align-self: ${props => props.align};
 `;
 export const List = styled.ul`
   list-style: none;
@@ -47,7 +48,7 @@ export const List = styled.ul`
 `;
 export const ListItem = styled.li`
   color: rgba(255, 255, 255, 0.8);
-  font-size: ${metrics.fonts.xlarge};
+  font-size: ${metrics.fonts.xxlarge};
   font-weight: 300;
   padding-bottom: 15px;
 `;
@@ -63,7 +64,7 @@ export const BlockSocial = styled.div`
 export const SocialTitle = styled.h2`
   color: rgba(255, 255, 255, 0.8);
   font-weight: 300;
-  font-size: ${metrics.fonts.xlarge};
+  font-size: ${metrics.fonts.xxlarge};
   white-space: nowrap;
 `;
 export const SocialItems = styled.div`
@@ -115,28 +116,29 @@ export const Social = () => (
 // Payment methods //
 
 export const PaymentList = styled.div`
-  border: solid 1px red;
-  /* border-bottom: solid 1px ${colors.secondary}; */
+  border-bottom: solid 1px ${colors.secondary};
   height: auto;
   display: flex;
   padding: 50px 0 58px 15px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `;
 
 export const PaymentText = styled(SocialTitle)`
-  margin-bottom: ${props => props.marginb + "px"};
+  margin-bottom: ${props => props.marginb + "px"}
+  font-size: ${metrics.fonts.xxxlarge};
 `;
 export const PaymentCardList = styled(List)`
   flex-direction: row;
+  height: auto;
 `;
-export const PaymentCardListItem = styled(ListItem)``;
+export const PaymentCardListItem = styled(ListItem)`
+  margin-right: 15px;
+  margin-top: 15px;
+  padding-bottom: 0;
+`;
 
 export const Card = styled.img`
   width: 44px;
   height: 29px;
 `;
-
-export const CardIcon = props => (
-  <PaymentCardListItem>
-    <Card src={props} />
-  </PaymentCardListItem>
-);

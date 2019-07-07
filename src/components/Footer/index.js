@@ -99,14 +99,24 @@ export default class Header extends Component {
           }
         ]
       }
+    ],
+    foodStamps: [
+      { key: 1, img: sodexo },
+      { key: 2, img: alelo },
+      { key: 3, img: visavale },
+      { key: 4, img: ticketalimentacao },
+      { key: 5, img: upplan },
+      { key: 6, img: goodcard },
+      { key: 7, img: policard },
+      { key: 8, img: vralimentacao }
+    ],
+    debitCards: [
+      { key: 1, img: elo },
+      { key: 2, img: mastercard },
+      { key: 3, img: redeshop },
+      { key: 4, img: chequeeletronico },
+      { key: 5, img: visa }
     ]
-  };
-  renderImageListOne = () => {
-    return (
-      <li>
-        <img src={sodexo} />
-      </li>
-    );
   };
 
   render() {
@@ -135,11 +145,29 @@ export default class Header extends Component {
               </ListBlock>
             </NavList>
             <PaymentList>
-              <ListBlock width={100}>
+              <ListBlock>
                 <PaymentText marginb={30}>Formas de Pagamento</PaymentText>
                 <PaymentText marginb={10}>
                   Cartoes de Alimentação
-                  <PaymentCardList>{this.renderImageListOne()}</PaymentCardList>
+                  <PaymentCardList>
+                    {this.state.foodStamps.map(image => (
+                      <PaymentCardListItem key={image.key}>
+                        <img src={image.img} />
+                      </PaymentCardListItem>
+                    ))}
+                  </PaymentCardList>
+                </PaymentText>
+              </ListBlock>
+              <ListBlock align={"flex-end"} width={50}>
+                <PaymentText marginb={10}>
+                  Cartoes de Débito
+                  <PaymentCardList>
+                    {this.state.debitCards.map(image => (
+                      <PaymentCardListItem key={image.key}>
+                        <img src={image.img} />
+                      </PaymentCardListItem>
+                    ))}
+                  </PaymentCardList>
                 </PaymentText>
               </ListBlock>
             </PaymentList>
