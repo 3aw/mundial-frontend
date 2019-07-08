@@ -123,7 +123,7 @@ export const PaymentBlock = styled.div`
 `;
 
 export const PaymentText = styled(SocialTitle)`
-  margin-bottom: ${props => props.marginb + "px"}
+  margin-bottom: ${props => props.marginb + "px"};
   font-size: ${metrics.fonts.xxxlarge};
 `;
 export const PaymentCardList = styled(List)`
