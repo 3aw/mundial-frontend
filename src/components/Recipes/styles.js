@@ -19,4 +19,5 @@ export const Strong = styled.strong`
 export const Image = styled.img`
   width: ${props => props.size}%;
   margin: auto;
+  display: block;
 `;
