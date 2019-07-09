@@ -14,8 +14,8 @@ export default class Home extends Component {
         <Header />
         <Carousel />
         <Offers />
-        <LegalText />
         <Footer />
+        <LegalText />
       </Container>
     );
   }
