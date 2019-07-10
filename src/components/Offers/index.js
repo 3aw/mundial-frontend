@@ -13,21 +13,31 @@ export default class Offers extends Component {
           image:
             "https://supermercadosmundial.com.br/content/240x240/E05oIAUM4FD4H5OT.png",
           title: "Camarão Cinza 100/120 Pacote 1 kg",
-          price: "2.45",
+          value: "2.45",
           each: true
         },
         {
           id: 2,
-          image: "",
-          title: "xx",
-          price: "xx",
+          image:
+            "https://www.supermercadosmundial.com.br/content/240x240/PPd6g5idgLmt6tkj.png",
+          title: "Café pilão",
+          value: "5.88",
           each: false
         },
         {
           id: 3,
-          image: "",
-          title: "xx",
-          price: "xx",
+          image:
+            "https://www.supermercadosmundial.com.br/content/240x240/ualnTdUS7BOKC3y8.png",
+          title: "Filé de merluza",
+          value: "5.00",
+          each: false
+        },
+        {
+          id: 3,
+          image:
+            "https://www.supermercadosmundial.com.br/content/240x240/Jhmilr4jFK0Up39g.png",
+          title: "Filezinho de frango seara",
+          value: "5.00",
           each: false
         }
       ]

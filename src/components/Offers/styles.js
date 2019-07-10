@@ -85,13 +85,16 @@ export const Obs = styled.div`
   padding-top: 3px;
 `;
 
-export const Price = () => (
-  <PriceBox>
-    <Currency>R$</Currency>
-    <Value>2,</Value>
-    <ObsBlock>
-      <Cents>45</Cents>
-      <Obs>cada</Obs>
-    </ObsBlock>
-  </PriceBox>
-);
+export const Price = props => {
+  const value = props.value.split(".");
+  return (
+    <PriceBox>
+      <Currency>R$</Currency>
+      <Value>{value[0]}</Value>
+      <ObsBlock>
+        <Cents>{value[1]}</Cents>
+        <Obs>{props.each ? "cada" : ""}</Obs>
+      </ObsBlock>
+    </PriceBox>
+  );
+};
