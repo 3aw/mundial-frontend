@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import arrow from "../../assets/images/arrow.svg";
+import React from "react";
 
 import { metrics, colors } from "../../globals";
 
@@ -52,3 +53,45 @@ export const Title = styled.p`
   font-size: ${metrics.fonts.small};
   color: ${colors.darkgray};
 `;
+
+export const PriceBox = styled.div`
+  text-align: center;
+  color: ${colors.darkgray};
+  text-weight: bold;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+`;
+export const Currency = styled.div`
+  padding: 9px 10px 0 0;
+`;
+
+export const Value = styled.div`
+  font-size: ${metrics.fonts.giant};
+  color: ${colors.primary};
+  padding: 0 5px;
+`;
+export const ObsBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+export const Cents = styled.div`
+  font-size: ${metrics.fonts.regular};
+  color: ${colors.primary};
+`;
+export const Obs = styled.div`
+  font-size: ${metrics.fonts.xsmall};
+  padding-top: 3px;
+`;
+
+export const Price = () => (
+  <PriceBox>
+    <Currency>R$</Currency>
+    <Value>2,</Value>
+    <ObsBlock>
+      <Cents>45</Cents>
+      <Obs>cada</Obs>
+    </ObsBlock>
+  </PriceBox>
+);

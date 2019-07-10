@@ -6,6 +6,7 @@ export default {
     regular: "15px",
     large: "18px",
     xlarge: "20px",
-    xxlarge: "22px;"
+    xxlarge: "22px",
+    giant: "45px"
   }
 };
