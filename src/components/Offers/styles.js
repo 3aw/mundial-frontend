@@ -90,9 +90,9 @@ export const Price = props => {
   return (
     <PriceBox>
       <Currency>R$</Currency>
-      <Value>{value[0]}</Value>
+      <Value>{value[0]},</Value>
       <ObsBlock>
-        <Cents>{value[1]}</Cents>
+        <Cents>{value[1] ? value[1] : "00"}</Cents>
         <Obs>{props.each ? "cada" : ""}</Obs>
       </ObsBlock>
     </PriceBox>
