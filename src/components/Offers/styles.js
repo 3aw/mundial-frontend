@@ -281,6 +281,7 @@ export const Slick = styled.div`
         border-radius: 10px;
         background-color: ${colors.gray};
         margin: 0 3px;
+        cursor: pointer;
       }
       &.slick-active{
         button{
