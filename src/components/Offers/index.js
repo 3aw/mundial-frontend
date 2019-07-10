@@ -79,8 +79,9 @@ export default class Offers extends Component {
 
   render() {
     var settings = {
-      dots: false,
-      slidesToShow: 4
+      dots: true,
+      slidesToShow: 4,
+      slidesToScroll: 4
     };
 
     return (

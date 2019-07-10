@@ -103,6 +103,7 @@ export const Slick = styled.div`
   width: 100%;
   color: #333;
   margin-bottom: -5px;
+  
 
   /* Slider */
   .slick-slider {
@@ -111,7 +112,7 @@ export const Slick = styled.div`
     display: block;
     box-sizing: border-box;
 
-    max-height: 480px;
+    max-height: 520px;
 
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -255,6 +256,27 @@ export const Slick = styled.div`
   }
   .slick-dots {
     margin-left: 0;
+    position: absolute;
+    bottom: 0;
+    display: flex !important;
+    justify-content: center;
+    width: 100%;
+    li{
+      button{
+        font-size: 0 !important;
+        border: none;
+        width: 12px;
+        height: 12px;
+        border-radius: 10px;
+        background-color: ${colors.gray};
+        margin: 0 3px;
+      }
+      &.slick-active{
+        button{
+          background-color: ${colors.darkblue};
+        }
+      }
+    }
   }
   .slick-thumb {
     bottom: -45px;
