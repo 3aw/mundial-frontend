@@ -8,7 +8,8 @@ import {
   Image,
   Title,
   Price,
-  Slick
+  Slick,
+  Warning
 } from "./styles";
 import { HeaderTitle } from "../Titles/styles";
 import { colors } from "../../globals";
@@ -105,6 +106,13 @@ export default class Offers extends Component {
             </Slick>
           </Wrapper>
         </Items>
+
+        <Warning>
+          O ministério da saúde adverte: o aleitamento materno evita infecções e
+          alergias e é recomendado até os dois anos de idade ou mais. Após os
+          seis meses de idade continue amamentando seu filho e ofereça novos
+          alimentos. O mundial apoia a campanha do aleitamento materno.
+        </Warning>
       </Container>
     );
   }

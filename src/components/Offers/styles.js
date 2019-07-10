@@ -99,6 +99,17 @@ export const Price = props => {
   );
 };
 
+export const Warning = styled.div`
+  width: 100%;
+  max-width: 1140px;
+  margin: 10px auto;
+  text-transform: uppercase;
+  border: 1px solid ${colors.darkgray};
+  color: ${colors.darkgray};
+  padding: 10px;
+  font-size: ${metrics.fonts.regular};
+`;
+
 export const Slick = styled.div`
   width: 100%;
   color: #333;
