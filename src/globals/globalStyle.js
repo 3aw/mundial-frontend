@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-
+import { colors } from "./";
 export const GlobalStyle = createGlobalStyle`
   *{margin: 0; padding: 0; outline: none; box-sizing: border-box; list-style: none;}
   @import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500');
@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto';
     body{
       height: 100%;
+      background: ${colors.softgray};
       #root{
         height: 100%;
         

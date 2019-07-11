@@ -5,7 +5,7 @@ export const HeaderTitle = styled.h1`
   font-weight: 100;
   color: ${props => props.color};
   margin: 0 0 28px;
-  border-top: 1px solid #fb8b45;
+  /* border-top: 1px solid #fb8b45; */
   padding: 12px 0 0 0;
   position: relative;
   width: 100%;

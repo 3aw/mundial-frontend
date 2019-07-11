@@ -6,5 +6,7 @@ export default {
   gray: "#c5c5c5",
   realprimary: "#db812e",
   darkgray: "#8a8a8a",
-  black: "#000000"
+  black: "#000000",
+  softblack: "#5f5f5f",
+  softgray: "#f1f1f1"
 };

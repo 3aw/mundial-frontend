@@ -9,7 +9,7 @@ export const Container = styled.div`
   // background-color: ${colors.primary};
   background-image: linear-gradient(to bottom, ${colors.primary} 0%,${
   colors.primary
-} 520px,${colors.white} 520px,white 520px,white 100%);
+} 520px,transparent 520px,transparent 520px,transparent 100%);
   display: flex;
   padding: 60px 0;
   justify-content: space-around;
