@@ -3,13 +3,12 @@ import arrow from "../../assets/images/orangearrow.svg";
 import React from "react";
 
 import { metrics, colors } from "../../globals";
+import { GlobalWrapper } from "../../globals/grid";
 
 export const Container = styled.div`
   width: 100%;
   // background-color: ${colors.primary};
-  background-image: linear-gradient(to bottom, ${colors.primary} 0%,${
-  colors.primary
-} 520px,${colors.white} 520px,white 520px,white 100%);
+  background-image: linear-gradient(to bottom, ${colors.primary} 0%,${colors.primary} 520px,${colors.white} 520px,white 520px,white 100%);
   display: flex;
   padding: 60px 0;
   justify-content: space-around;
@@ -17,9 +16,7 @@ export const Container = styled.div`
   min-height: 448px;
 `;
 
-export const Wrapper = styled.div`
-  width: 100%;
-  max-width: 1170px;
+export const Wrapper = styled(GlobalWrapper)`
   display: flex;
   padding: 20px 0;
   justify-content: space-around;
@@ -57,7 +54,6 @@ export const Title = styled.p`
 export const PriceBox = styled.div`
   text-align: center;
   color: ${colors.darkgray};
-  text-weight: bold;
   display: flex;
   justify-content: center;
   padding: 20px 0;
@@ -114,38 +110,24 @@ export const Slick = styled.div`
   width: 100%;
   color: #333;
   margin-bottom: -5px;
-  
 
   /* Slider */
   .slick-slider {
     position: relative;
-
     display: block;
     box-sizing: border-box;
-
-    max-height: 520px;
-
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
-
-    -webkit-touch-callout: none;
-    -khtml-user-select: none;
-    -ms-touch-action: pan-y;
     touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
   }
 
   .slick-list {
     position: relative;
-
     display: block;
     overflow: hidden;
-
     margin: 0;
-    padding: 0;
+    padding: 25px 15px;
   }
+
   .slick-list:focus {
     outline: none;
   }
@@ -156,19 +138,10 @@ export const Slick = styled.div`
 
   .slick-slider .slick-track,
   .slick-slider .slick-list {
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
 
   .slick-track {
-    position: relative;
-    top: 0;
-    left: 0;
-    padding: 0 10px;
-
     display: block;
   }
   .slick-track:before,
@@ -220,6 +193,8 @@ export const Slick = styled.div`
     display: none;
   }
   /* End slider */
+
+  /* Style */
 
   h3 {
     background: blue;
@@ -358,4 +333,5 @@ export const Slick = styled.div`
   .slick-next {
     right: -100px;
   }
+  /* End style */
 `;
