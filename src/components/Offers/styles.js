@@ -1,12 +1,120 @@
 import styled from "styled-components";
-import arrow from "../../assets/images/arrow.svg";
+import arrow from "../../assets/images/orangearrow.svg";
+import React from "react";
 
-import { colors } from "../../globals";
+import { metrics, colors } from "../../globals";
 
 export const Container = styled.div`
   width: 100%;
+  // background-color: ${colors.primary};
+  background-image: linear-gradient(to bottom, ${colors.primary} 0%,${
+  colors.primary
+} 520px,${colors.white} 520px,white 520px,white 100%);
+  display: flex;
+  padding: 60px 0;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  min-height: 448px;
+`;
+
+export const Wrapper = styled.div`
+  width: 100%;
+  max-width: 1170px;
+  display: flex;
+  padding: 20px 0;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+export const Items = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Item = styled.div`
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  height: 460px;
+  width: 100%;
+  max-width: 260px;
+`;
+
+export const Image = styled.img`
+  padding: 10px;
+`;
+
+export const Title = styled.p`
+  width: 100%;
+  text-align: center;
+  padding: 0px 20px;
+  font-size: ${metrics.fonts.small};
+  color: ${colors.darkgray};
+`;
+
+export const PriceBox = styled.div`
+  text-align: center;
+  color: ${colors.darkgray};
+  text-weight: bold;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+`;
+export const Currency = styled.div`
+  padding: 9px 10px 0 0;
+`;
+
+export const Value = styled.div`
+  font-size: ${metrics.fonts.giant};
+  color: ${colors.primary};
+  padding: 0 5px;
+`;
+export const ObsBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+export const Cents = styled.div`
+  font-size: ${metrics.fonts.regular};
+  color: ${colors.primary};
+`;
+export const Obs = styled.div`
+  font-size: ${metrics.fonts.xsmall};
+  padding-top: 3px;
+`;
+
+export const Price = props => {
+  const value = props.value.split(".");
+  return (
+    <PriceBox>
+      <Currency>R$</Currency>
+      <Value>{value[0]},</Value>
+      <ObsBlock>
+        <Cents>{value[1] ? value[1] : "00"}</Cents>
+        <Obs>{props.each ? "cada" : ""}</Obs>
+      </ObsBlock>
+    </PriceBox>
+  );
+};
+
+export const Warning = styled.div`
+  width: 100%;
+  max-width: 1140px;
+  margin: 10px auto;
+  text-transform: uppercase;
+  border: 1px solid ${colors.darkgray};
+  color: ${colors.darkgray};
+  padding: 10px;
+  font-size: ${metrics.fonts.regular};
+`;
+
+export const Slick = styled.div`
+  width: 100%;
   color: #333;
   margin-bottom: -5px;
+  
 
   /* Slider */
   .slick-slider {
@@ -14,6 +122,8 @@ export const Container = styled.div`
 
     display: block;
     box-sizing: border-box;
+
+    max-height: 520px;
 
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -57,6 +167,7 @@ export const Container = styled.div`
     position: relative;
     top: 0;
     left: 0;
+    padding: 0 10px;
 
     display: block;
   }
@@ -156,6 +267,28 @@ export const Container = styled.div`
   }
   .slick-dots {
     margin-left: 0;
+    position: absolute;
+    bottom: 0;
+    display: flex !important;
+    justify-content: center;
+    width: 100%;
+    li{
+      button{
+        font-size: 0 !important;
+        border: none;
+        width: 12px;
+        height: 12px;
+        border-radius: 10px;
+        background-color: ${colors.gray};
+        margin: 0 3px;
+        cursor: pointer;
+      }
+      &.slick-active{
+        button{
+          background-color: ${colors.darkblue};
+        }
+      }
+    }
   }
   .slick-thumb {
     bottom: -45px;
@@ -200,27 +333,29 @@ export const Container = styled.div`
     z-index: 1;
     border: 2px solid ${colors.white};
     font-size: 0;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    // background-color: white;
+    background-color: white;
     background-image: url('${arrow}');
     background-size: 70%;
     background-position: 50%;
     background-repeat: no-repeat;
     border-radius: 25px;
     padding: 10px;
-    opacity: 0.5;
+    opacity: 1;
     cursor: pointer;
     transition: opacity .5s;
   }
   .slick-arrow:hover {
-    opacity: 1;
+    opacity: .5;
     transition: opacity .5s;
   }
   .slick-prev {
-    left: 50px;
+    left: -100px;
     transform: scaleX(-1);
   }
   .slick-next {
-    right: 50px;
+    right: -100px;
   }
 `;
